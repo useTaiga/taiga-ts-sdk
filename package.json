@@ -1,0 +1,510 @@
+{
+    "name": "@taigabilling/sdk",
+    "version": "0.1.0",
+    "private": false,
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/useTaiga/taiga-ts-sdk.git"
+    },
+    "license": "MIT",
+    "type": "commonjs",
+    "main": "./dist/cjs/index.js",
+    "module": "./dist/esm/index.mjs",
+    "types": "./dist/cjs/index.d.ts",
+    "exports": {
+        ".": {
+            "import": {
+                "types": "./dist/esm/index.d.mts",
+                "default": "./dist/esm/index.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/index.d.ts",
+                "default": "./dist/cjs/index.js"
+            },
+            "default": "./dist/cjs/index.js"
+        },
+        "./billingNotes": {
+            "import": {
+                "types": "./dist/esm/api/resources/billingNotes/exports.d.mts",
+                "default": "./dist/esm/api/resources/billingNotes/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/billingNotes/exports.d.ts",
+                "default": "./dist/cjs/api/resources/billingNotes/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/billingNotes/exports.js"
+        },
+        "./chargeCaptureBundles": {
+            "import": {
+                "types": "./dist/esm/api/resources/chargeCaptureBundles/exports.d.mts",
+                "default": "./dist/esm/api/resources/chargeCaptureBundles/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/chargeCaptureBundles/exports.d.ts",
+                "default": "./dist/cjs/api/resources/chargeCaptureBundles/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/chargeCaptureBundles/exports.js"
+        },
+        "./chargeCapture": {
+            "import": {
+                "types": "./dist/esm/api/resources/chargeCapture/exports.d.mts",
+                "default": "./dist/esm/api/resources/chargeCapture/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/chargeCapture/exports.d.ts",
+                "default": "./dist/cjs/api/resources/chargeCapture/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/chargeCapture/exports.js"
+        },
+        "./contracts": {
+            "import": {
+                "types": "./dist/esm/api/resources/contracts/exports.d.mts",
+                "default": "./dist/esm/api/resources/contracts/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/contracts/exports.d.ts",
+                "default": "./dist/cjs/api/resources/contracts/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/contracts/exports.js"
+        },
+        "./credentialing": {
+            "import": {
+                "types": "./dist/esm/api/resources/credentialing/exports.d.mts",
+                "default": "./dist/esm/api/resources/credentialing/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/credentialing/exports.d.ts",
+                "default": "./dist/cjs/api/resources/credentialing/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/credentialing/exports.js"
+        },
+        "./encounterAttachments": {
+            "import": {
+                "types": "./dist/esm/api/resources/encounterAttachments/exports.d.mts",
+                "default": "./dist/esm/api/resources/encounterAttachments/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/encounterAttachments/exports.d.ts",
+                "default": "./dist/cjs/api/resources/encounterAttachments/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/encounterAttachments/exports.js"
+        },
+        "./encounterProviders": {
+            "import": {
+                "types": "./dist/esm/api/resources/encounterProviders/exports.d.mts",
+                "default": "./dist/esm/api/resources/encounterProviders/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/encounterProviders/exports.d.ts",
+                "default": "./dist/cjs/api/resources/encounterProviders/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/encounterProviders/exports.js"
+        },
+        "./encounterSupplementalInformation": {
+            "import": {
+                "types": "./dist/esm/api/resources/encounterSupplementalInformation/exports.d.mts",
+                "default": "./dist/esm/api/resources/encounterSupplementalInformation/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/encounterSupplementalInformation/exports.d.ts",
+                "default": "./dist/cjs/api/resources/encounterSupplementalInformation/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/encounterSupplementalInformation/exports.js"
+        },
+        "./encounters": {
+            "import": {
+                "types": "./dist/esm/api/resources/encounters/exports.d.mts",
+                "default": "./dist/esm/api/resources/encounters/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/encounters/exports.d.ts",
+                "default": "./dist/cjs/api/resources/encounters/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/encounters/exports.js"
+        },
+        "./feeSchedules": {
+            "import": {
+                "types": "./dist/esm/api/resources/feeSchedules/exports.d.mts",
+                "default": "./dist/esm/api/resources/feeSchedules/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/feeSchedules/exports.d.ts",
+                "default": "./dist/cjs/api/resources/feeSchedules/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/feeSchedules/exports.js"
+        },
+        "./guarantor": {
+            "import": {
+                "types": "./dist/esm/api/resources/guarantor/exports.d.mts",
+                "default": "./dist/esm/api/resources/guarantor/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/guarantor/exports.d.ts",
+                "default": "./dist/cjs/api/resources/guarantor/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/guarantor/exports.js"
+        },
+        "./healthCareCodeInformation": {
+            "import": {
+                "types": "./dist/esm/api/resources/healthCareCodeInformation/exports.d.mts",
+                "default": "./dist/esm/api/resources/healthCareCodeInformation/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/healthCareCodeInformation/exports.d.ts",
+                "default": "./dist/cjs/api/resources/healthCareCodeInformation/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/healthCareCodeInformation/exports.js"
+        },
+        "./insuranceRefunds": {
+            "import": {
+                "types": "./dist/esm/api/resources/insuranceRefunds/exports.d.mts",
+                "default": "./dist/esm/api/resources/insuranceRefunds/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/insuranceRefunds/exports.d.ts",
+                "default": "./dist/cjs/api/resources/insuranceRefunds/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/insuranceRefunds/exports.js"
+        },
+        "./nonInsurancePayerPayments": {
+            "import": {
+                "types": "./dist/esm/api/resources/nonInsurancePayerPayments/exports.d.mts",
+                "default": "./dist/esm/api/resources/nonInsurancePayerPayments/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/nonInsurancePayerPayments/exports.d.ts",
+                "default": "./dist/cjs/api/resources/nonInsurancePayerPayments/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/nonInsurancePayerPayments/exports.js"
+        },
+        "./nonInsurancePayerRefunds": {
+            "import": {
+                "types": "./dist/esm/api/resources/nonInsurancePayerRefunds/exports.d.mts",
+                "default": "./dist/esm/api/resources/nonInsurancePayerRefunds/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/nonInsurancePayerRefunds/exports.d.ts",
+                "default": "./dist/cjs/api/resources/nonInsurancePayerRefunds/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/nonInsurancePayerRefunds/exports.js"
+        },
+        "./nonInsurancePayers": {
+            "import": {
+                "types": "./dist/esm/api/resources/nonInsurancePayers/exports.d.mts",
+                "default": "./dist/esm/api/resources/nonInsurancePayers/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/nonInsurancePayers/exports.d.ts",
+                "default": "./dist/cjs/api/resources/nonInsurancePayers/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/nonInsurancePayers/exports.js"
+        },
+        "./organizationProviders": {
+            "import": {
+                "types": "./dist/esm/api/resources/organizationProviders/exports.d.mts",
+                "default": "./dist/esm/api/resources/organizationProviders/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/organizationProviders/exports.d.ts",
+                "default": "./dist/cjs/api/resources/organizationProviders/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/organizationProviders/exports.js"
+        },
+        "./organizationServiceFacilities": {
+            "import": {
+                "types": "./dist/esm/api/resources/organizationServiceFacilities/exports.d.mts",
+                "default": "./dist/esm/api/resources/organizationServiceFacilities/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/organizationServiceFacilities/exports.d.ts",
+                "default": "./dist/cjs/api/resources/organizationServiceFacilities/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/organizationServiceFacilities/exports.js"
+        },
+        "./patientPayments": {
+            "import": {
+                "types": "./dist/esm/api/resources/patientPayments/exports.d.mts",
+                "default": "./dist/esm/api/resources/patientPayments/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/patientPayments/exports.d.ts",
+                "default": "./dist/cjs/api/resources/patientPayments/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/patientPayments/exports.js"
+        },
+        "./patientRefunds": {
+            "import": {
+                "types": "./dist/esm/api/resources/patientRefunds/exports.d.mts",
+                "default": "./dist/esm/api/resources/patientRefunds/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/patientRefunds/exports.d.ts",
+                "default": "./dist/cjs/api/resources/patientRefunds/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/patientRefunds/exports.js"
+        },
+        "./payers": {
+            "import": {
+                "types": "./dist/esm/api/resources/payers/exports.d.mts",
+                "default": "./dist/esm/api/resources/payers/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/payers/exports.d.ts",
+                "default": "./dist/cjs/api/resources/payers/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/payers/exports.js"
+        },
+        "./preServiceRules": {
+            "import": {
+                "types": "./dist/esm/api/resources/preServiceRules/exports.d.mts",
+                "default": "./dist/esm/api/resources/preServiceRules/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/preServiceRules/exports.d.ts",
+                "default": "./dist/cjs/api/resources/preServiceRules/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/preServiceRules/exports.js"
+        },
+        "./serviceLines": {
+            "import": {
+                "types": "./dist/esm/api/resources/serviceLines/exports.d.mts",
+                "default": "./dist/esm/api/resources/serviceLines/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/serviceLines/exports.d.ts",
+                "default": "./dist/cjs/api/resources/serviceLines/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/serviceLines/exports.js"
+        },
+        "./tasks": {
+            "import": {
+                "types": "./dist/esm/api/resources/tasks/exports.d.mts",
+                "default": "./dist/esm/api/resources/tasks/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/tasks/exports.d.ts",
+                "default": "./dist/cjs/api/resources/tasks/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/tasks/exports.js"
+        },
+        "./diagnoses": {
+            "import": {
+                "types": "./dist/esm/api/resources/diagnoses/exports.d.mts",
+                "default": "./dist/esm/api/resources/diagnoses/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/diagnoses/exports.d.ts",
+                "default": "./dist/cjs/api/resources/diagnoses/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/diagnoses/exports.js"
+        },
+        "./priorAuthorizations": {
+            "import": {
+                "types": "./dist/esm/api/resources/priorAuthorizations/exports.d.mts",
+                "default": "./dist/esm/api/resources/priorAuthorizations/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/priorAuthorizations/exports.d.ts",
+                "default": "./dist/cjs/api/resources/priorAuthorizations/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/priorAuthorizations/exports.js"
+        },
+        "./prices": {
+            "import": {
+                "types": "./dist/esm/api/resources/prices/exports.d.mts",
+                "default": "./dist/esm/api/resources/prices/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/prices/exports.d.ts",
+                "default": "./dist/cjs/api/resources/prices/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/prices/exports.js"
+        },
+        "./manualClaims": {
+            "import": {
+                "types": "./dist/esm/api/resources/manualClaims/exports.d.mts",
+                "default": "./dist/esm/api/resources/manualClaims/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/manualClaims/exports.d.ts",
+                "default": "./dist/cjs/api/resources/manualClaims/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/manualClaims/exports.js"
+        },
+        "./preEncounter": {
+            "import": {
+                "types": "./dist/esm/api/resources/preEncounter/exports.d.mts",
+                "default": "./dist/esm/api/resources/preEncounter/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/preEncounter/exports.d.ts",
+                "default": "./dist/cjs/api/resources/preEncounter/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/preEncounter/exports.js"
+        },
+        "./preEncounter/appointments": {
+            "import": {
+                "types": "./dist/esm/api/resources/preEncounter/resources/appointments/exports.d.mts",
+                "default": "./dist/esm/api/resources/preEncounter/resources/appointments/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/preEncounter/resources/appointments/exports.d.ts",
+                "default": "./dist/cjs/api/resources/preEncounter/resources/appointments/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/preEncounter/resources/appointments/exports.js"
+        },
+        "./preEncounter/coverages": {
+            "import": {
+                "types": "./dist/esm/api/resources/preEncounter/resources/coverages/exports.d.mts",
+                "default": "./dist/esm/api/resources/preEncounter/resources/coverages/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/preEncounter/resources/coverages/exports.d.ts",
+                "default": "./dist/cjs/api/resources/preEncounter/resources/coverages/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/preEncounter/resources/coverages/exports.js"
+        },
+        "./preEncounter/eligibilityChecks": {
+            "import": {
+                "types": "./dist/esm/api/resources/preEncounter/resources/eligibilityChecks/exports.d.mts",
+                "default": "./dist/esm/api/resources/preEncounter/resources/eligibilityChecks/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/preEncounter/resources/eligibilityChecks/exports.d.ts",
+                "default": "./dist/cjs/api/resources/preEncounter/resources/eligibilityChecks/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/preEncounter/resources/eligibilityChecks/exports.js"
+        },
+        "./preEncounter/images": {
+            "import": {
+                "types": "./dist/esm/api/resources/preEncounter/resources/images/exports.d.mts",
+                "default": "./dist/esm/api/resources/preEncounter/resources/images/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/preEncounter/resources/images/exports.d.ts",
+                "default": "./dist/cjs/api/resources/preEncounter/resources/images/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/preEncounter/resources/images/exports.js"
+        },
+        "./preEncounter/lists": {
+            "import": {
+                "types": "./dist/esm/api/resources/preEncounter/resources/lists/exports.d.mts",
+                "default": "./dist/esm/api/resources/preEncounter/resources/lists/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/preEncounter/resources/lists/exports.d.ts",
+                "default": "./dist/cjs/api/resources/preEncounter/resources/lists/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/preEncounter/resources/lists/exports.js"
+        },
+        "./preEncounter/notes": {
+            "import": {
+                "types": "./dist/esm/api/resources/preEncounter/resources/notes/exports.d.mts",
+                "default": "./dist/esm/api/resources/preEncounter/resources/notes/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/preEncounter/resources/notes/exports.d.ts",
+                "default": "./dist/cjs/api/resources/preEncounter/resources/notes/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/preEncounter/resources/notes/exports.js"
+        },
+        "./preEncounter/organizationExternalProviders": {
+            "import": {
+                "types": "./dist/esm/api/resources/preEncounter/resources/organizationExternalProviders/exports.d.mts",
+                "default": "./dist/esm/api/resources/preEncounter/resources/organizationExternalProviders/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/preEncounter/resources/organizationExternalProviders/exports.d.ts",
+                "default": "./dist/cjs/api/resources/preEncounter/resources/organizationExternalProviders/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/preEncounter/resources/organizationExternalProviders/exports.js"
+        },
+        "./preEncounter/patients": {
+            "import": {
+                "types": "./dist/esm/api/resources/preEncounter/resources/patients/exports.d.mts",
+                "default": "./dist/esm/api/resources/preEncounter/resources/patients/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/preEncounter/resources/patients/exports.d.ts",
+                "default": "./dist/cjs/api/resources/preEncounter/resources/patients/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/preEncounter/resources/patients/exports.js"
+        },
+        "./preEncounter/tags": {
+            "import": {
+                "types": "./dist/esm/api/resources/preEncounter/resources/tags/exports.d.mts",
+                "default": "./dist/esm/api/resources/preEncounter/resources/tags/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/preEncounter/resources/tags/exports.d.ts",
+                "default": "./dist/cjs/api/resources/preEncounter/resources/tags/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/preEncounter/resources/tags/exports.js"
+        },
+        "./views": {
+            "import": {
+                "types": "./dist/esm/api/resources/views/exports.d.mts",
+                "default": "./dist/esm/api/resources/views/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/views/exports.d.ts",
+                "default": "./dist/cjs/api/resources/views/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/views/exports.js"
+        },
+        "./views/dynamic": {
+            "import": {
+                "types": "./dist/esm/api/resources/views/resources/dynamic/exports.d.mts",
+                "default": "./dist/esm/api/resources/views/resources/dynamic/exports.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/api/resources/views/resources/dynamic/exports.d.ts",
+                "default": "./dist/cjs/api/resources/views/resources/dynamic/exports.js"
+            },
+            "default": "./dist/cjs/api/resources/views/resources/dynamic/exports.js"
+        },
+        "./package.json": "./package.json"
+    },
+    "files": [
+        "dist",
+        "reference.md",
+        "README.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "format": "biome format --write --skip-parse-errors --no-errors-on-unmatched --max-diagnostics=none",
+        "format:check": "biome format --skip-parse-errors --no-errors-on-unmatched --max-diagnostics=none",
+        "lint": "biome lint --skip-parse-errors --no-errors-on-unmatched --max-diagnostics=none",
+        "lint:fix": "biome lint --fix --unsafe --skip-parse-errors --no-errors-on-unmatched --max-diagnostics=none",
+        "check": "biome check --skip-parse-errors --no-errors-on-unmatched --max-diagnostics=none",
+        "check:fix": "biome check --fix --unsafe --skip-parse-errors --no-errors-on-unmatched --max-diagnostics=none",
+        "build": "pnpm build:cjs && pnpm build:esm",
+        "build:cjs": "tsc --project ./tsconfig.cjs.json",
+        "build:esm": "tsc --project ./tsconfig.esm.json && node scripts/rename-to-esm-files.js dist/esm",
+        "test": "vitest",
+        "test:unit": "vitest --project unit",
+        "test:wire": "vitest --project wire"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "webpack": "^5.105.4",
+        "ts-loader": "^9.5.4",
+        "vitest": "^4.1.1",
+        "msw": "2.11.2",
+        "@types/node": "^20.0.0",
+        "typescript": "~5.9.3",
+        "@biomejs/biome": "2.4.10"
+    },
+    "browser": {
+        "fs": false,
+        "os": false,
+        "path": false,
+        "stream": false,
+        "crypto": false
+    },
+    "packageManager": "pnpm@10.33.0",
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "sideEffects": false
+}
