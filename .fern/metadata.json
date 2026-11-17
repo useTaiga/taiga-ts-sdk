@@ -1,0 +1,14 @@
+{
+    "cliVersion": "5.119.1",
+    "generatorName": "fernapi/fern-typescript-sdk",
+    "generatorVersion": "3.109.2",
+    "generatorConfig": {
+        "namespaceExport": "Taiga"
+    },
+    "originGitCommit": "0e0fee4c9a6587fd4a2135e8a19063a03f4e91a3",
+    "originGitCommitIsDirty": false,
+    "invokedBy": "ci",
+    "requestedVersion": "0.1.0",
+    "ciProvider": "github",
+    "sdkVersion": "0.1.0"
+}

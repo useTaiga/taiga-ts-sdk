@@ -1,0 +1,18 @@
+export * from "./appointments/client/requests/index.js";
+export * as appointments from "./appointments/index.js";
+export * from "./coverages/client/requests/index.js";
+export * as coverages from "./coverages/index.js";
+export * from "./eligibilityChecks/client/requests/index.js";
+export * as eligibilityChecks from "./eligibilityChecks/index.js";
+export * from "./images/client/requests/index.js";
+export * as images from "./images/index.js";
+export * from "./lists/client/requests/index.js";
+export * as lists from "./lists/index.js";
+export * from "./notes/client/requests/index.js";
+export * as notes from "./notes/index.js";
+export * from "./organizationExternalProviders/client/requests/index.js";
+export * as organizationExternalProviders from "./organizationExternalProviders/index.js";
+export * from "./patients/client/requests/index.js";
+export * as patients from "./patients/index.js";
+export * from "./tags/client/requests/index.js";
+export * as tags from "./tags/index.js";
